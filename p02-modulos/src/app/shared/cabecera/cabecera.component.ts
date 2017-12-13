@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class CabeceraComponent implements OnInit {
 
   public sTitulo: string;
+  sLogo: string;
 
   constructor() {
    }
 
   ngOnInit() {
     this.sTitulo = 'Módulos en Angular';
+    this.sLogo = '../../assets/logo_angular.svg';
   }
 
 }
