@@ -1,0 +1,20 @@
+<div class="row mt-4">
+  <div class="card col">
+    <div class="card-header">
+      Componente hijo
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="nombre">Dime tu nombre</label>
+        <input type="text" [(ngModel)]="sName"
+          class="form-control" name="nombre" id="nombre" 
+          placeholder="Dime tu nombre">
+      </div>
+      <button id="btnBorrar" class="btn btn-primary"
+      (click)="btnBorrar($event)">No me gusta {{sName}}</button>     </div>
+    <div class="card-footer text-muted">
+     Me llamo {{sName}}
+    </div>
+  </div>
+</div>
+
