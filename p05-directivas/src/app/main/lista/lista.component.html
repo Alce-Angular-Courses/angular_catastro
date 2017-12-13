@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="card col-8">
+      <div class="card-header">
+        <p class="h3">Lista de tareas</p>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="tarea">Indica una tarea</label>
+          <input type="text" [(ngModel)]="sTarea"
+            class="form-control" name="tarea" id="tarea" placeholder="">
+        </div>
+        <button (click)="addTareas()"
+          class="btn btn-primary">Añadir</button>
+      </div>
+      <div *ngIf="aTareas.length"
+        class="card-footer text-muted">
+        <p>Tareas</p>
+        <ul class="list-group">
+          <li *ngFor="let tarea of aTareas; let i = index"
+            class="list-group-item">{{tarea}} ({{i+1}})</li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,34 @@
+<div class="row mt-4">
+    <div class="card col-8">
+      <div class="card-header">
+        <p class="h3">Lista de tareas en Angular 4</p>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="tarea">Indica una tarea</label>
+          <input type="text" [(ngModel)]="sTarea"
+            class="form-control" name="tarea" id="tarea" placeholder="">
+        </div>
+        <button (click)="addTareas()"
+          class="btn btn-primary">Añadir</button>
+      </div>
+      <div *ngIf="aTareas.length; then conTareas else sinTareas"
+        class="card-footer text-muted"></div>
+
+      <ng-template #conTareas>
+         <p>Tareas</p>
+        <ul class="list-group">
+          <li *ngFor="let tarea of aTareas; let i = index"
+            class="list-group-item">{{tarea}} ({{i+1}})</li>
+        </ul>       
+      </ng-template>  
+
+      <ng-template #sinTareas >
+        <p>Animate y escribe alguna tarea</p>
+      </ng-template>
+
+      
+  </div>
+</div>
+
+
