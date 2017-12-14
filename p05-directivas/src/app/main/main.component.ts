@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
     <div class="container alto">
       <app-lista></app-lista>
       <app-lista-v4></app-lista-v4>
+      <app-lista-xtend></app-lista-xtend>
+      <app-acumulador></app-acumulador>
     </div>
   `,
   styles: [

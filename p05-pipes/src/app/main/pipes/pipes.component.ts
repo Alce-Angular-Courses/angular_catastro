@@ -17,13 +17,13 @@ export class PipesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.sNombre = 'Pepe perez';
+    this.sNombre = 'Pepe pérez';
     this.nValor = 30.876;
     this.nPrecio = 4.50;
     this.nPerc = 0.3476;
     this.dFecha = new Date();
     this.oDato = {nombre: 'Pepe',
-                  apellidos: 'Perex'};
+                  apellidos: 'Perez'};
   }
 
 }
