@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div class="container alto">
           <app-lista></app-lista>
+          <app-lista-google></app-lista-google>
     </div>
   `,
   styles: [

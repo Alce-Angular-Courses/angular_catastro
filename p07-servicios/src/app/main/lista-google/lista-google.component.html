@@ -1,0 +1,28 @@
+<div class="row mt-4">
+    <div class="card col-8">
+      <div class="card-header">
+        <p class="h3">Busqueda de libros en Google</p>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="clave">Indica una clave</label>
+          <input type="text" [(ngModel)]="sClave"
+            class="form-control" name="clave" id="clave" placeholder="">
+        </div>
+        <button (click)="buscarLibros()"
+          class="btn btn-primary">Buscar</button>
+          <button (click)="buscarLibrosRx()"
+          class="btn btn-primary">Buscar Rx</button>
+      </div>
+      <div *ngIf="aLibros.length"
+        class="card-footer text-muted">
+        <p>{{sTitle}}</p>
+        <ul class="list-group">
+          <li *ngFor="let libro of aLibros"
+            class="list-group-item">{{libro}}</li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+
