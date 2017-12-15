@@ -8,9 +8,9 @@ import { DetailsComponent } from './catalogo/details/details.component';
 import { AuthGuard } from './services/guard.service';
 
 const routes: Routes = [
-    { path: 'inicio', component: MainComponent, canActivate: [AuthGuard] },
+    { path: 'inicio', component: MainComponent},
     // { path: 'books', component: BookListComponent },
-    { path: 'catalogo', component: CatalogoComponent },
+    { path: 'catalogo', component: CatalogoComponent, canActivate: [AuthGuard]  },
     { path: 'book/:id', component: DetailsComponent },
     { path: 'autores', component: AutorsComponent },
     { path: 'noticias', component: NoticiasComponent },
